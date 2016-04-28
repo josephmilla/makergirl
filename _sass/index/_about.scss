@@ -3,6 +3,31 @@
  * - Styling for the list of members
  */
 #about-us {
+    // Basics
+    p {
+      font-family: 'PT Serif', serif;
+      font-size: 26px;
+      line-height: 39px;
+      font-weight: 400;
+      margin-bottom: 40px;
+      text-align: left;
+    }
+
+    h2 {
+      font-family: "Helvetica Neue",Helvetica,"pragmatica-web",Arial,sans-serif;
+      font-size: 66px;
+      line-height: 73px;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      margin: 100px 0 100px;
+
+      @include media-query($screen-sm-min) {
+        font-size: 31px;
+        line-height: 35px;
+        margin: 30px 0 30px;
+      }
+    }
+
     // Cards
     .cards {
         perspective: 1000;
@@ -112,6 +137,12 @@
         -ms-transform: rotateY(180deg) rotateZ(-0.7893703440204263deg) scale(1.07);
         -o-transform: rotateY(180deg) rotateZ(-0.7893703440204263deg) scale(1.07);
         transform: rotateY(180deg) rotateZ(-0.7893703440204263deg) scale(1.07);
+    }
+    .boa:hover .card {
+        opacity: 0.75;
+    }
+    .boa:active .card {
+        opacity: 0.90;
     }
     // Blockquote
     .blockquote {
